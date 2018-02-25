@@ -11,7 +11,7 @@ namespace SocialLinksClient
     {
         public override string Name { get { return "SocialLinksClient"; } }
         public override string Author { get { return " by salva/juli"; } }
-        public override Version Version { get { return new Version("1.0"); } }
+        public override Version Version { get { return new Version("1.1"); } }
         public override void Initialize()
         {
             if (this.IsConnectedToAServer)
@@ -29,8 +29,10 @@ namespace SocialLinksClient
             if (message.ToLower().Contains("sociallinks"))
             {
                 string[] partir = message.ToString().Split(new char[] { '=' });
-                var link = partir[1];
-                Rust.Notice.Popup("", "A new web browser has been opened", 15);
+                string link = partir[1];
+                string clientmsg = partir[2];
+                int duration = Convert.ToInt32(partir[3]);
+                Rust.Notice.Popup("", clientmsg, duration);
                 Application.OpenURL(link);
             }
         }
