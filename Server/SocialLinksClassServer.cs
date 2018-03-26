@@ -13,7 +13,7 @@ namespace SocialLinks
         public override string Name { get { return "SocialLinks"; } }
         public override string Author { get { return "Salva/Juli"; } }
         public override string Description { get { return "SocialLinks"; } }
-        public override Version Version { get { return new Version("1.1"); } }
+        public override Version Version { get { return new Version("1.2"); } }
         public string green = "[color #82FA58]";
 
         public bool EnableAnnounce = true;
@@ -131,23 +131,23 @@ namespace SocialLinks
         {
             if (cmd == "web")
             {
-                player.SendConsoleMessage("SocialLinks=" + Web + "=" + ClientMessage + "=" + MessageDuration);
+                player.SendConsoleMessage("messagesociallinks=" + Web + "=" + ClientMessage + "=" + MessageDuration);
             }
             else if (cmd == "discord")
             {
-                player.SendConsoleMessage("SocialLinks=" + Discord + "=" + ClientMessage + "=" + MessageDuration);
+                player.SendConsoleMessage("messagesociallinks=" + Discord + "=" + ClientMessage + "=" + MessageDuration);
             }
             else if (cmd == "facebook")
             {
-                player.SendConsoleMessage("SocialLinks=" + Facebook + "=" + ClientMessage + "=" + MessageDuration);
+                player.SendConsoleMessage("messagesociallinks=" + Facebook + "=" + ClientMessage + "=" + MessageDuration);
             }
             else if (cmd == "instagram")
             {
-                player.SendConsoleMessage("SocialLinks=" + Instagram + "=" + ClientMessage + "=" + MessageDuration);
+                player.SendConsoleMessage("messagesociallinks=" + Instagram + "=" + ClientMessage + "=" + MessageDuration);
             }
             else if (cmd == "vk")
             {
-                player.SendConsoleMessage("SocialLinks=" + VKontakte + "=" + ClientMessage + "=" + MessageDuration);
+                player.SendConsoleMessage("messagesociallinks=" + VKontakte + "=" + ClientMessage + "=" + MessageDuration);
             }
             else if (cmd == "sociallinks" && args[0] == "reload" && player.Admin)
             {
